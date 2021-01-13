@@ -1,0 +1,5 @@
+.popup__add-invalid {
+    opacity: .2;
+    fill: black;
+    stroke: black;
+}

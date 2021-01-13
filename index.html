@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css">
+  </head>
+
+  <body>
+    <div class="root">
+      <header class="header root__section">
+        <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      </header>
+      <div class="profile root__section">
+        <div class="user-info">
+          <div class="user-info__photo"></div>
+          <div class="user-info__data">
+            <h1 class="user-info__name">Jaques Causteau</h1>
+            <p class="user-info__job">Sailor, Researcher</p>
+            <button class="button user-info__edit-button">Edit</button>
+          </div>
+          <button class="button user-info__button">
+            <img src="./images/plus-white.svg" alt="" class="button__open">
+          </button>
+        </div>
+      </div>
+      <div class="places-list root__section">
+
+        <!-- Пример вёрстки карточки: -->
+
+        <!-- <div class="place-card">
+        <div class="place-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg)">
+          <button class="place-card__delete-icon"></button>
+        </div>
+        <div class="place-card__description">
+          <h3 class="place-card__name">Камчатка</h3>
+          <button class="place-card__like-icon"></button>
+        </div>
+      </div> -->
+
+        <!-- конец примера. -->
+
+      </div>
+      <div class="popup popup__new-place">
+        <div class="popup__content">
+          <img src="./images/close.svg" alt="" class="popup__close popup__close-new-place">
+          <h3 class="popup__title">Новое место</h3>
+          <form class="popup__form" name="formNewPlace">
+            <input id="newPlace" required minlength="2" maxlength="30" type="text" name="namePlace"
+              class="popup__input popup__input_type_name-place" placeholder="Название">
+            <span id="error-newPlace" class="popup__error popup__error-namePlace"></span>
+
+            <input id="link" required type="text" name="link" class="popup__input popup__input_type_link-url"
+              placeholder="Ссылка на картинку">
+            <span id="error-link" class="popup__error popup__error-link"></span>
+
+            <button id="submit-formNewPlace" type="submit" class="button popup__button">
+              <svg class="popup__add" width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.7222 10.1872V10.6872H12.2222H21.5V12.1391H12.2222H11.7222V12.6391V21.9466H10.2778V12.6391V12.1391H9.77778H0.5V10.6872H9.77778H10.2778V10.1872V0.8797H11.7222V10.1872Z" fill="white" stroke="white"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="popup popup__edit-user-info">
+        <div class="popup__content">
+          <img src="./images/close.svg" alt="" class="popup__close popup__close-edit">
+          <h3 class="popup__title">Редактировать профиль</h3>
+          <form class="popup__form" name="formUserInfo">
+
+            <input id="username" required minlength="2" maxlength="30" type="text" name="username"
+              class="popup__input popup__input_type_name-user" placeholder="Имя">
+            <span id="error-username" class="popup__error"></span>
+
+            <input id="userWork" required type="text" name="userWork" class="popup__input popup__input_type_user-info"
+              placeholder="О себе">
+            <span id="error-userWork" class="popup__error"></span>
+
+            <button id="submit-formUserInfo" type="submit" class="button popup__button">Сохранить</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="popup popup__picture">
+        <div class="popup__content-picture">
+          <img src="./images/close.svg" alt="" class="popup__close popup__close-picture">
+          <img src="" alt="" class="popup__image">
+        </div>
+      </div>
+    </div>
+    <script src="./initialCards.js"></script>
+    <script src="./script.js"></script>
+  </body>
+
+</html>
